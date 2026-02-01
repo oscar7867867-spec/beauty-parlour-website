@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glow Beauty Parlour</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
     body { background: #fff5f8; color: #333; }
+    html { scroll-behavior: smooth; }
 
     header {
       background: linear-gradient(to right, #ff758c, #ff7eb3);
@@ -67,8 +69,11 @@
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
     }
 
+    .card:hover { transform: translateY(-5px); }
     .card h3 { margin-bottom: 10px; color: #ff4f81; }
 
     .about, .contact {
@@ -92,6 +97,8 @@
       border: none;
       border-radius: 20px;
       cursor: pointer;
+      margin-right: 10px;
+      margin-top: 10px;
     }
 
     footer {
@@ -108,12 +115,13 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Glow Beauty Parlour</h1>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -124,29 +132,36 @@
   <div>
     <h2>Feel Beautiful Every Day</h2>
     <p>Professional beauty care just for you</p>
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><button>Book Appointment on WhatsApp</button></a>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
+      <button>Book Appointment on WhatsApp</button>
+    </a>
   </div>
 </section>
 
 <section id="services">
   <h2 style="text-align:center; margin-bottom:30px;">Our Services</h2>
   <div class="services">
-    <div class="card">
+
+    <div class="card" onclick="window.open('https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Facial%20service','_blank')">
       <h3>Facial & Cleanup</h3>
       <p>Glow-enhancing facials for all skin types.</p>
     </div>
-    <div class="card">
+
+    <div class="card" onclick="window.open('https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Bridal%20Makeup','_blank')">
       <h3>Bridal Makeup</h3>
       <p>Perfect makeup for your special day.</p>
     </div>
-    <div class="card">
+
+    <div class="card" onclick="window.open('https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Hair%20Styling','_blank')">
       <h3>Hair Styling</h3>
       <p>Haircut, smoothening, coloring & spa.</p>
     </div>
-    <div class="card">
+
+    <div class="card" onclick="window.open('https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Manicure%20Pedicure','_blank')">
       <h3>Manicure & Pedicure</h3>
       <p>Relaxing care for hands and feet.</p>
     </div>
+
   </div>
 </section>
 
@@ -163,12 +178,18 @@
 <section id="contact">
   <div class="contact">
     <h2>Contact Us</h2>
-    <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
+
+    <form onsubmit="window.open('https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20book%20an%20appointment','_blank'); return false;">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit">Send on WhatsApp</button>
     </form>
+
+    <a href="tel:9876543210"><button>Call Now</button></a>
+    <a href="https://maps.google.com/?q=Your+Beauty+Parlour+Address" target="_blank">
+      <button>Get Location</button>
+    </a>
   </div>
 </section>
 
@@ -178,3 +199,4 @@
 
 </body>
 </html>
+
